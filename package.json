@@ -1,6 +1,6 @@
 {
   "name": "@shtse8/bun-plugin-dts",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A Bun plugin to generate TypeScript declaration files (.d.ts) during build.",
   "type": "module",
   "main": "dist/index.js",

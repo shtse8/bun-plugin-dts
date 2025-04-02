@@ -1,4 +1,4 @@
-# Progress: @shtse8/bun-plugin-dts (Ready for v0.1.1 Publish)
+# Progress: @shtse8/bun-plugin-dts (Ready for v0.1.2 Publish)
 
 ## 1. What Works
 
@@ -9,19 +9,22 @@
 - Memory Bank established and updated.
 - **Core `.d.ts` generation logic implemented and tested.**
 - Test infrastructure created.
-- `package.json` and `tsconfig.json` cleaned up and configured.
+- `package.json` (scoped name `@shtse8/bun-plugin-dts`) and `tsconfig.json`
+  configured.
 - **Git repository initialized and pushed to GitHub.**
 - **CI/CD pipeline using GitHub Actions created.**
-- **Documentation (`README.md`, `LICENSE`) added.**
+- **Documentation (`README.md`, `LICENSE`) added and updated.**
+- **Version 0.1.1 published to npm** (potentially with slightly outdated
+  README).
 
 ## 2. What's Left to Build
 
-- **Publishing:**
-  - Commit package name/version changes.
-  - Tag and push `v0.1.1` to trigger publish workflow.
-  - Verify successful publish on npm.
+- **Publishing v0.1.2:**
+  - Commit package version bump (`0.1.2`).
+  - Tag and push `v0.1.2` to trigger publish workflow.
+  - Verify successful publish of `v0.1.2` on npm (with correct README).
 - **User Action:**
-  - Ensure `NPM_TOKEN` secret is correct for `@shtse8` scope.
+  - Ensure `NPM_TOKEN` secret is correct.
 - **Refinement & Features:**
   - Implementation of plugin options.
   - More comprehensive error handling and reporting.
@@ -31,16 +34,13 @@
 
 ## 3. Current Status
 
-- **Phase:** Ready for v0.1.1 Publish Attempt.
-- **State:** Core functionality is working and tested. CI/CD is set up.
-  Documentation added. Package name updated to `@shtse8/bun-plugin-dts` and
-  version bumped to `0.1.1` to resolve previous publish error. Ready to commit
-  changes and trigger the publish workflow for `v0.1.1`.
+- **Phase:** Ready for v0.1.2 Publish Attempt.
+- **State:** Core functionality working, tested, documented. CI/CD setup
+  confirmed working (published v0.1.1). Package name corrected. README updated.
+  Version bumped to `0.1.2` to publish latest changes including README update.
+  Ready to commit version bump and trigger publish for `v0.1.2`.
 
 ## 4. Known Issues / Blockers
 
-- **NPM Token Permissions:** The `NPM_TOKEN` secret must be valid and have
-  permission to publish packages under the `@shtse8` scope on npm.
-- **Previous Failed Publish:** The `v0.1.0` tag exists but the corresponding
-  publish failed. Publishing `v0.1.1` under the new name should succeed if the
-  token is correct.
+- **v0.1.1 README:** The published v0.1.1 on npm might have the README
+  reflecting the old package name. Publishing v0.1.2 will correct this.
