@@ -1,51 +1,38 @@
-# Active Context: bun-plugin-dts (Refinement & Options)
+# Active Context: @shtse8/bun-plugin-dts (Ready for v0.1.1 Publish)
 
 ## 1. Current Focus
 
-The core `.d.ts` generation logic is implemented and verified with a basic test.
-The focus now shifts to refining the plugin and adding configurability:
-
-- Implementing plugin options (e.g., overriding `tsconfig.json` path, specifying
-  different output directory).
-- Enhancing error handling and reporting for edge cases.
-- Adding more comprehensive tests covering different scenarios (e.g., multiple
-  entry points, complex types, errors in source files).
-- Improving performance (if necessary, after further testing).
-- Updating documentation (`README.md`) and `package.json` details.
+The package name has been updated to the scoped name `@shtse8/bun-plugin-dts`
+and the version bumped to `0.1.1` to resolve the previous publishing conflict.
+The focus is now on committing these changes and triggering the publish workflow
+for the new version.
 
 ## 2. Recent Changes
 
-- Ran initial test (`bun test`) which successfully verified `.d.ts` generation
-  for the test fixture.
-- Cleaned up temporary `console.log` statements in `src/index.ts`.
-- Prefixed plugin-specific error messages for better clarity.
-- Corrected `package.json` to remove invalid comments and duplicate keys.
-- Created test infrastructure:
-  - `test/fixture/src/index.ts`
-  - `test/fixture/tsconfig.json`
-  - `test/build.ts` (script to run Bun build on fixture)
-  - `test/plugin.test.ts` (using `bun:test`)
-- Configured main `tsconfig.json` with `include`/`exclude` to avoid conflicts
-  with test files.
+- **Renamed Package:** Updated `name` in `package.json` to
+  `@shtse8/bun-plugin-dts`.
+- **Bumped Version:** Updated `version` in `package.json` to `0.1.1`.
+- Created GitHub Actions workflow file (`.github/workflows/publish.yml`).
+- Committed and pushed the workflow file to the GitHub repository.
+- Updated `package.json` with GitHub repository details.
+- Initialized local Git repository and pushed initial code + workflow.
+- Added `README.md` and `LICENSE` files.
+- Attempted to publish `v0.1.0` (failed due to 403 error, likely name conflict
+  or token issue).
 
 ## 3. Next Steps
 
-1. **Implement Plugin Options:** Define an options interface and modify
-   `src/index.ts` to accept and use options passed during plugin registration in
-   `Bun.build`.
-2. **Add More Tests:** Create tests for:
-   - Using plugin options.
-   - Projects without a `tsconfig.json`.
-   - Projects with TS errors.
-   - Multiple entry points.
-3. **Refine Error Handling:** Ensure clear and actionable error messages for all
-   anticipated failure modes.
-4. **Update README.md:** Add usage instructions and configuration details.
-5. **Update `package.json`:** Fill in author, repository, homepage details.
+1. **Commit Changes:** Commit the `package.json` update (name and version) and
+   updated Memory Bank files.
+2. **Push Commit:** Push the commit to `origin master`.
+3. **Tag and Push v0.1.1:** Create and push the `v0.1.1` tag to trigger the
+   GitHub Actions publish workflow for the correctly named package.
+4. **(User Action)** Ensure the `NPM_TOKEN` secret in GitHub is correct and has
+   permissions for the `@shtse8` scope if necessary.
 
 ## 4. Active Decisions & Considerations
 
-- **Options Interface:** Design a clear and intuitive interface for plugin
-  options.
-- **Error Strategy:** Decide whether specific errors (like missing tsconfig)
-  should halt the build or just log a warning.
+- **Scoped Package Name:** Using `@shtse8/bun-plugin-dts` avoids potential
+  naming conflicts and clearly identifies the publisher.
+- **Version Bump:** Incrementing to `0.1.1` provides a clean slate for
+  publishing under the new name.

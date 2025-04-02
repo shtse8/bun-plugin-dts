@@ -1,6 +1,6 @@
-# bun-plugin-dts
+# @shtse8/bun-plugin-dts
 
-[![npm version](https://badge.fury.io/js/bun-plugin-dts.svg)](https://badge.fury.io/js/bun-plugin-dts)
+[![npm version](https://badge.fury.io/js/%40shtse8%2Fbun-plugin-dts.svg)](https://badge.fury.io/js/%40shtse8%2Fbun-plugin-dts)
 [![CI](https://github.com/shtse8/bun-plugin-dts/actions/workflows/publish.yml/badge.svg)](https://github.com/shtse8/bun-plugin-dts/actions/workflows/publish.yml)
 
 A plugin for [Bun](https://bun.sh) that generates TypeScript declaration files
@@ -13,14 +13,14 @@ not generate `.d.ts` files automatically. This makes it difficult to publish
 TypeScript libraries built with Bun, as consumers rely on these files for type
 checking and autocompletion.
 
-`bun-plugin-dts` solves this by hooking into the build process and using the
-TypeScript Compiler API to generate the necessary declaration files alongside
-your JavaScript output.
+`@shtse8/bun-plugin-dts` solves this by hooking into the build process and using
+the TypeScript Compiler API to generate the necessary declaration files
+alongside your JavaScript output.
 
 ## Installation
 
 ```bash
-bun add --dev bun-plugin-dts
+bun add --dev @shtse8/bun-plugin-dts
 ```
 
 You also need `typescript` installed, which is likely already in your project:
@@ -38,7 +38,7 @@ configuration.
 
 ```typescript
 import Bun from "bun";
-import dts from "bun-plugin-dts"; // Import the plugin
+import dts from "@shtse8/bun-plugin-dts"; // Import the plugin
 
 await Bun.build({
     entrypoints: ["./src/index.ts"],
@@ -75,4 +75,4 @@ request on the [GitHub repository](https://github.com/shtse8/bun-plugin-dts).
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file
-for details (Note: LICENSE file not yet created).
+for details.
