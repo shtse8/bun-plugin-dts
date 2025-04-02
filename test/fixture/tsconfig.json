@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "lib": ["ESNext"],
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "outDir": "./dist", // Specify an output directory for the fixture build
+    "rootDir": "./src", // Specify the source directory
+    "declaration": true, // Enable declaration generation (the plugin will also ensure this)
+    "skipLibCheck": true
+    // Add other options as needed for testing specific scenarios later
+  },
+  "include": ["src/**/*"], // Only include source files
+  "exclude": ["node_modules", "dist"] // Exclude build output
+}

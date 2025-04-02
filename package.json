@@ -1,0 +1,42 @@
+{
+  "name": "bun-plugin-dts",
+  "version": "0.1.0",
+  "description": "A Bun plugin to generate TypeScript declaration files (.d.ts) during build.",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "bun build ./src/index.ts --outdir ./dist --target bun",
+    "test": "bun test",
+    "prepublishOnly": "bun run build"
+  },
+  "keywords": [
+    "bun",
+    "plugin",
+    "typescript",
+    "dts",
+    "declaration"
+  ],
+  "author": "",
+  "license": "MIT",
+  "homepage": "https://github.com/shtse8/bun-plugin-dts#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shtse8/bun-plugin-dts.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shtse8/bun-plugin-dts/issues"
+  },
+  "private": false,
+  "devDependencies": {
+    "@types/bun": "^1.2.8"
+  },
+  "dependencies": {
+    "typescript": "^5.8.2"
+  }
+}

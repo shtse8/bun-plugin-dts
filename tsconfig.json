@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    // Environment setup & latest features
+    "lib": ["ESNext"],
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleDetection": "force", // Keep Bun's recommendation
+    // "jsx": "react-jsx", // Not needed for this plugin
+    "allowJs": true, // Keep Bun's recommendation
+    "rootDir": "src", // Specify source directory
+    "declaration": true, // Generate .d.ts files for the plugin itself
+    "declarationMap": true, // Optional: Generate sourcemaps for declarations
+    "sourceMap": true, // Generate .js.map sourcemap files
+
+    // Bundler mode
+    "moduleResolution": "bundler",
+    "verbatimModuleSyntax": true, // Keep Bun's recommendation
+    // "noEmit": true, // We need to emit build artifacts
+    "outDir": "./dist", // Specify output directory
+
+    // Best practices
+    "strict": true,
+    "skipLibCheck": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+
+    // Some stricter flags (disabled by default)
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noPropertyAccessFromIndexSignature": false
+  },
+  "include": [ // Only include files in the src directory for the plugin build
+    "src/**/*"
+  ],
+  "exclude": [ // Exclude node_modules, build output, and tests
+    "node_modules",
+    "dist",
+    "test"
+  ]
+}
