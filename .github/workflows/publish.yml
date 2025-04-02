@@ -1,0 +1,42 @@
+name: Publish Package to npm
+
+on:
+  push:
+    tags:
+      - 'v*.*.*' # Trigger on version tags like v1.0.0, v0.1.2 etc.
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest # Use the latest Ubuntu runner
+    permissions:
+      contents: read
+      # id-token: write # Use this if using npm's trusted publishers OIDC
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2 # Use the official setup-bun action
+        with:
+          bun-version: latest # Or pin to a specific version
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile # Use frozen lockfile for reproducibility
+
+      - name: Run tests
+        run: bun test
+
+      - name: Build package
+        run: bun run build # Assumes 'build' script in package.json builds correctly
+
+      - name: Setup Node.js for npm publish
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20' # Use a recent LTS Node.js version for npm CLI
+          registry-url: 'https://registry.npmjs.org/' # Point to the public npm registry
+
+      - name: Publish to npm
+        run: npm publish --access public # Publish as a public package
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }} # Use the secret token
