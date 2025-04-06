@@ -72,6 +72,13 @@ future if needed.
 Contributions are welcome! Please feel free to open an issue or submit a pull
 request on the [GitHub repository](https://github.com/shtse8/bun-plugin-dts).
 
+## Support
+
+If you find this plugin helpful, consider supporting the development:
+
+[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/shtse8)
+
+
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file
