@@ -1,5 +1,10 @@
 # @shtse8/bun-plugin-dts
 
+<p align="center">
+  <img src="docs/banner.png" alt="bun-plugin-dts banner" width="100%" />
+</p>
+
+
 [![npm version](https://badge.fury.io/js/%40shtse8%2Fbun-plugin-dts.svg)](https://badge.fury.io/js/%40shtse8%2Fbun-plugin-dts)
 [![CI](https://github.com/shtse8/bun-plugin-dts/actions/workflows/publish.yml/badge.svg)](https://github.com/shtse8/bun-plugin-dts/actions/workflows/publish.yml)
 
