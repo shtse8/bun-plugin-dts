@@ -1,9 +1,8 @@
 # @shtse8/bun-plugin-dts
 
 <p align="center">
-  <img src="docs/banner.png" alt="bun-plugin-dts banner" width="100%" />
+  <img src="https://mark.sylphx.com/api/v1/banner?type=glass&theme=tokyonight&text=bun+plugin+dts&desc=A+Bun+plugin+to+automatically+generate+TypeScript+declaration+files+%28.d.ts%29+duri&height=200&animation=rise&credit=0" alt="bun-plugin-dts — Sylphx Mark banner" width="100%" />
 </p>
-
 
 [![npm version](https://badge.fury.io/js/%40shtse8%2Fbun-plugin-dts.svg)](https://badge.fury.io/js/%40shtse8%2Fbun-plugin-dts)
 [![CI](https://github.com/shtse8/bun-plugin-dts/actions/workflows/publish.yml/badge.svg)](https://github.com/shtse8/bun-plugin-dts/actions/workflows/publish.yml)
