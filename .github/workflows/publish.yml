@@ -31,7 +31,7 @@ jobs:
         run: bun run build # Assumes 'build' script in package.json builds correctly
 
       - name: Setup Node.js for npm publish
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: '20' # Use a recent LTS Node.js version for npm CLI
           registry-url: 'https://registry.npmjs.org/' # Point to the public npm registry
