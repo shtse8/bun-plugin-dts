@@ -33,7 +33,7 @@ jobs:
       - name: Setup Node.js for npm publish
         uses: actions/setup-node@v6
         with:
-          node-version: '20' # Use a recent LTS Node.js version for npm CLI
+          node-version: '24' # Use a recent LTS Node.js version for npm CLI
           registry-url: 'https://registry.npmjs.org/' # Point to the public npm registry
 
       - name: Publish to npm
